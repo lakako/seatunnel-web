@@ -8,9 +8,9 @@ github地址： https://github.com/apache/seatunnel
 
 1. 检查SeaTunnel version ,在根目录的pom文件中
 
-   ​														![img.png](images\image-20230727135201238.png)
+![img.png](images/image-20230727135201238.png)
 
-2. 在终端中输入命令 ： ./mvnw clean install '-Dmaven.test.skip=true' '-Dcheckstyle.skip=true   或者输入 mvn clean install -DskipTests=true
+2. 在终端中输入命令 ：`./mvnw clean install '-Dmaven.test.skip=true' '-Dcheckstyle.skip=true`，或者输入 `mvn clean install -DskipTests=true`
 
 3. 执行完成后，显示如下：
 
@@ -26,7 +26,7 @@ github地址： https://github.com/apache/seatunnel
 
 在ST-Web跟目录的pom文件中设置SeaTunnel引擎版本，参考1.2中的SeaTunnel version
 
-​	![img.png](images\image-20230727141624507.png)
+​![img.png](images/image-20230727141624507.png)
 
 ## 2.2添加 Connector依赖
 
@@ -34,11 +34,11 @@ github地址： https://github.com/apache/seatunnel
 
 1. 在根目录的pom文件中的<dependencyManagement>中添加kafka连接器依赖管理（注意修改该依赖的<scope>（不要是test级别））
 
-​			![img.png](images\image-20230727144108242.png)
+​![img.png](images/image-20230727144108242.png)
 
 2. 在seatunnel-server/seatunnel-app/pom.xml文件中添加kafka连接器依赖（注意修改该依赖的<scope>（不要是test级别））
 
-​		![img.png](images\image-20230727144320362.png)
+![img.png](images/image-20230727144320362.png)
 
 ## 2.3 打包SeaTunnel Web 项目
 
@@ -50,15 +50,15 @@ github地址： https://github.com/apache/seatunnel
 
 2. 假如你使用的是IDEA，打开Edit Configurations
 
-​		![img.png](images\image-20230727145045703.png)
+![img.png](images/image-20230727145045703.png)
 
 3. 添加Enviroment variables，将apache-seatunnel-web-1.0.0-SNAPSHOT文件的绝对路径添加的Enviroment variables中，命名为ST_WEB_BASEDIR_PATH
 
-![img.png](images\image-20230727145203278.png)
+![img.png](images/image-20230727145203278.png)
 
-​											![img.png](images\image-20230727145452333.png)
+![img.png](images/image-20230727145452333.png)
 
-![image-20230727145652824](images\image-20230727145652824.png)
+![image-20230727145652824](images/image-20230727145652824.png)
 
 4. 在SeatunnelApplication.java 下启动ST-Web
 
@@ -68,19 +68,19 @@ github地址： https://github.com/apache/seatunnel
 
 初始用户名和密码都是admin
 
-​														![img.png](images\image-20230727163613305.png)
+![img.png](images/image-20230727163613305.png)
 
 ## 3.1创建数据源
 
-​				![image-20230727163756006](images\image-20230727163756006.png)
+![image-20230727163756006](images/image-20230727163756006.png)
 
 选择一个你需要使用的数据源
 
-![img.png](images\image-20230727163903835.png)
+![img.png](images/image-20230727163903835.png)
 
-![img.png](images\image-20230727164019922.png)
+![img.png](images/image-20230727164019922.png)
 
 ## 3.2创建同步任务
 
-![image-20230727164350427](images\image-20230727164350427.png)
+![image-20230727164350427](images/image-20230727164350427.png)
 
